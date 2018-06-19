@@ -1,12 +1,12 @@
 class Dispositivo(object):
 
-    def __init__(self, punctuacion=0, precio=10000, fabricante="(Omitido)", modelo="(Omitido)", tipo="(Omitido)"):
+    def __init__(self, puntuacion=0, precio=10000, fabricante="(Omitido)", modelo="(Omitido)", tipo="(Omitido)"):
         self.fabricante = fabricante
         self.tipo = tipo
         self.modelo = modelo
 
-        if(isinstance(punctuacion, (int, float))):
-            self.punctuacion = punctuacion
+        if(isinstance(puntuacion, (int, float))):
+            self.puntuacion = puntuacion
         else:
             raise TypeError("La puntuacion debe ser un numero")
         if(isinstance(precio, (int, float))):
@@ -20,7 +20,7 @@ class Dispositivo(object):
     def __str__(self):
         return self.tipo + " fabricado por " + self.fabricante + \
         "\nModelo: " + self.modelo + \
-        "\nPunctuacion: " + str(self.punctuacion) + \
+        "\nPuntuacion: " + str(self.puntuacion) + \
         "\nPrecio: " + str(self.precio) + "$"
 
     def __gt__(self, otro):
@@ -44,13 +44,13 @@ class Dispositivo(object):
             raise TypeError("Los dispositivos no son del mismo tipo")
 
     def dimePuntuacion(self):
-        return(self.punctuacion)
+        return(self.puntuacion)
 
     def dimePrecio(self):
         return(self.precio)
 
     def calidadPrecio(self):
-        return((self.punctuacion ** 2) * 10) / self.precio
+        return((self.puntuacion ** 2) * 10) / self.precio
 
 '''objetoDispositivo1 = Dispositivo(3.25, 159, "Samsung", "Galaxy Tab 3", "Tablet")
 objetoDispositivo2 = Dispositivo(4.75, 1300, "Google", "Pixel XL", "Smartphone")
@@ -85,13 +85,12 @@ lista.sort(key=Dispositivo.dimePuntuacion)
 
 print("\rDispositivos Ordenados por Puntuacion:")
 
-for disp in list:
+for disp in lista:
     print(" Puntuacion: " + str(disp.puntuacion) + " " + disp.fabricante + " " + disp.modelo + "Precio: " + str(disp.precio))
 
 lista.sort(key=Dispositivo.dimePrecio)
 
 print("\rDispositivos Ordenados por Precio:")
 
-for disp in list:
+for disp in lista:
     print(" Puntuacion: " + str(disp.precio) + " " + disp.fabricante + " " + disp.modelo + "Precio: " + str(disp.puntuacion))
-    
