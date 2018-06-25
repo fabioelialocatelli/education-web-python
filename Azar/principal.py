@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
-from modulo.funciones import azar
-from modulo.funciones import mensajeAcierto as msgAcierto
-from modulo.funciones import mensajeFallo as msgFallo
-from modulo.funciones import mensajeFin as msgFin
+from modulo.funciones import devuelveAzar as elAzar
+from modulo.funciones import mensajeAcertado as elAcierto
+from modulo.funciones import mensajeFallado as elFallo
+from modulo.funciones import mensajeFinalizado as elFinal
 
-numeroAzar = azar(10)
 contador = 1
-acierto = False
-while contador <= 3 and acierto is False:
-    numeroUsuario = eval(input("Dame un numero:"))
+hasAcertado = False
+numeroAzar = elAzar(15)
+
+while contador <= 3 and hasAcertado is False:
+    numeroUsuario = eval(input("Digame numero por favor:"))
+
     if numeroAzar == numeroUsuario:
-        msgAcierto()
-        acierto = True
+        elAcierto()
+        hasAcertado = True
     else:
-        msgFallo()
-    contador = contador + 1
-if(not acierto):
-    msgFin(numeroAzar)
+        elFallo()
+        
+    contador += 1
+if(not hasAcertado):
+    elFinal(numeroAzar)

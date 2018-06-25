@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 def agregaPalabras():
     meses = ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
     dias = ("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo")
@@ -18,36 +17,41 @@ def agregaPalabras():
             textoIntroducido.set("")
             palabraEncontrada = True
     if not palabraEncontrada:
-        descripcionError.set("No Reconocido")
+        textoError.set("No Reconocido")
     else:
-        descripcionError.set("Todo bien")
+        textoError.set("Todo bien")
 
 
 ventana = Tk()
 ventana.minsize(250, 250)
 ventana.maxsize(500, 500)
 
-primerPanel = Frame(ventana, background='teal', width=125, height=8)
+primerPanel = Frame(ventana, background='teal')
+segundoPanel = Frame(ventana, background='cyan')
+
 primerPanel.pack(side=TOP, expand=True, fill=BOTH)
+segundoPanel.pack(side=BOTTOM, expand=True, fill=BOTH)
 
-descripcionError = StringVar()
-Label(primerPanel, bg='fuchsia', textvariable=descripcionError).pack(side=BOTTOM)
-
-etiquetaNombre = Label(primerPanel, text="NOMBRE:", bg='fuchsia')
-etiquetaNombre.pack(side=LEFT)
+textoError = StringVar()
+textoDias = StringVar()
+textoMeses = StringVar()
 textoIntroducido = StringVar()
+
+Label(primerPanel, bg='fuchsia', textvariable=textoError, font='Verdana 10 italic').pack(side=BOTTOM)
+Label(segundoPanel, bg='yellow', textvariable=textoDias, font='Ebrima 10').pack(side=LEFT)
+Label(segundoPanel, bg='red', textvariable=textoMeses, font='Ebrima 10').pack(side=RIGHT)
+
+etiquetaNombre = Label(primerPanel, text="Nombre:", bg='fuchsia')
+etiquetaNombre.pack(side=LEFT)
+
 cuadroIntroduccion = Entry(primerPanel, textvariable=textoIntroducido)
 cuadroIntroduccion.pack(side=LEFT)
+
 botonIntroduccion = Button(primerPanel, text="Introducir", bg='fuchsia', relief=RIDGE, command=agregaPalabras)
 botonIntroduccion.pack(side=RIGHT)
 
-segundoPanel = Frame(ventana, background='gray', width=30, height=10)
-segundoPanel.pack(side=BOTTOM, expand=True, fill=X)
-textoDias = StringVar()
 textoDias.set("DIAS:")
-Label(segundoPanel, text="DIAS:", bg='yellow', textvariable=textoDias).pack(side=LEFT)
-textoMeses = StringVar()
 textoMeses.set("MESES:")
-Label(segundoPanel, bg='red', textvariable=textoMeses).pack(side=RIGHT)
+textoError.set("De momento bien")
 
 ventana.mainloop()

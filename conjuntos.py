@@ -2,23 +2,20 @@ Calabria = set({"Catanzaro", "Cosenza", "Crotona", "Reggio de Calabria", "Vibo V
 Campania = set({"Avellino", "Benevento", "Caserta", "Napoli", "Salerno"})
 Lacio = set({"Frosinone", "Latina", "Rieti", "Roma", "Viterbo"})
 Liguria = set({"Genova", "Imperia", "La Spezia", "Savona"})
-Lucania = set({"Matera", "Potenza"})
+Basilicata = set({"Matera", "Potenza"})
 Molise = set({"Campobasso", "Isernia"})
-Toscana = set({"Arezzo", "Florencia", "Grosseto", "Livorno", "Lucca", "Massa-Carrara", "Pisa"})
-Pistoia = set({"Prato", "Siena"})
+Toscana = set({"Arezzo", "Florencia", "Grosseto", "Livorno", "Lucca", "Massa-Carrara", "Pisa", "Pistoia"})
 Umbria = set({"Perusa", "Terni"})
 Veneto = set({"Belluno", "Padua", "Rovigo", "Treviso", "Venecia", "Verona", "Vicenza"})
 Lombardia = set({"Milan", "Monza", "Cremona", "Bergamo", "Brescia", "Pavia", "Mantua", "Sondrio", "Como", "Varese", "Lecco"})
 
-regiones = (Calabria, "Calabria", Campania, "Campania", Lacio, "Lacio", Liguria, "Liguria", Lucania, "Lucania", Molise, "Molise", Toscana, "Toscana", Umbria, "Umbria", Veneto, "Veneto", Lombardia, "Lombardia")
-
+regiones = (Calabria, "Calabria", Campania, "Campania", Lacio, "Lacio", Liguria, "Liguria", Basilicata, "Basilicata", Molise, "Molise", Toscana, "Toscana", Umbria, "Umbria", Veneto, "Veneto", Lombardia, "Lombardia")
 
 def encuentraProvincia(region):
     if provincia in region:
         return True
     else:
         return False
-
 
 def formarItalia(region):
     region.remove(provincia)
@@ -27,7 +24,7 @@ def formarItalia(region):
         print(nombre.ljust(20), end="")
         
     Italia = set()
-    Italia.update(Calabria, Campania, Lacio, Liguria, Lucania, Molise, Toscana, Umbria, Veneto, Lombardia)
+    Italia.update(Calabria, Campania, Lacio, Liguria, Basilicata, Molise, Toscana, Umbria, Veneto, Lombardia)
     
     ItaliaOrdenada = list(Italia)
     ItaliaOrdenada.sort()

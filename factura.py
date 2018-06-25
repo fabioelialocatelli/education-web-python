@@ -8,25 +8,24 @@ precioArticulo3 = eval(input("Precio: "))
 print("/n")
 print("factura".upper().center(90, "-"))
 
-print(articulo1.title().ljust(40, ".") + str(precioArticulo1).zfill(5) + "€")
-print(articulo2.title().ljust(40, ".") + str(precioArticulo2).zfill(5) + "€")
-print(articulo3.title().ljust(40, ".") + str(precioArticulo3).zfill(5) + "€")
+print(articulo1.title().ljust(85, ".") + str(precioArticulo1).zfill(5) + "$")
+print(articulo2.title().ljust(85, ".") + str(precioArticulo2).zfill(5) + "$")
+print(articulo3.title().ljust(85, ".") + str(precioArticulo3).zfill(5) + "$")
 
 print("-".center(90, "-"))
 
-base = precioArticulo1 + precioArticulo2 + precioArticulo3
-iva = base * 0.21
-total = base + iva
+precioBase = precioArticulo1 + precioArticulo2 + precioArticulo3
+impuestos = precioBase * 0.25
+coste = precioBase + impuestos
 
-txtbase = str(base)
-txtbase = txtbase[:txtbase.find(".") + 3]
+textoBase = str(precioBase)
+textoImpuestos = str(impuestos)
+textoCoste = str(coste)
 
-txtiva = str(iva)
-txtiva = txtiva[:txtiva.find(".") + 3]
+textoBase = textoBase[:textoBase.find(".") + 3] #utilizamos slice? quizas porque permite mas control?
+textoImpuestos = textoImpuestos[:textoImpuestos.find(".") + 3]
+textoCoste = textoCoste[:textoCoste.find(".") + 3]
 
-txttotal = str(total)
-txttotal = txttotal[:txttotal.find(".") + 3]
-
-print("Precio base: ".rjust(40) + txtbase.zfill(5) + "€")
-print("IVA: ".rjust(40) + txtiva.zfill(5) + "€")
-print("TOTAL A PAGAR: ".rjust(40) + txttotal.zfill(5) + "€")
+print("PRECIO BASE: ".rjust(85) + textoBase.zfill(5) + "$")
+print("IMPUESTOS: ".rjust(85) + textoImpuestos.zfill(5) + "$")
+print("COSTE: ".rjust(85) + textoCoste.zfill(5) + "$")

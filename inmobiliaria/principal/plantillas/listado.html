@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>LISTADO DE INMUEBLES</title>
+    </head>
+    <body>
+        <h1>Lista de inmuebles en nuestra base de datos</h1>
+        {% for elemento in lista %}
+        <ul>
+            <li><strong>{{elemento.zona}}</strong></li>
+            <li>Referencia: {{elemento.ref}}</li>
+            <li>{{elemento.descrip}}</li>
+            <li>{{elemento.precio}}</li>
+        </ul>
+        {% endfor %}
+    </body>
+</html>

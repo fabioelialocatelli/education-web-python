@@ -6,21 +6,21 @@ from gi.repository import Gtk
 
 def areaCilindro(boton):
     PIgriego = 3.141516
-    radio = float(constructorInterfaz.get_object("base_radio").get_text())
+    radio = float(constructorInterfaz.get_object("base").get_text())
     altura = float(constructorInterfaz.get_object("altura").get_text())
     area = round((2 * PIgriego * radio * altura), 4)
     etiqueta = constructorInterfaz.get_object("resultado")
     etiqueta.set_text(str(area))
 
 def areaRectangulo(boton):
-    base = float(constructorInterfaz.get_object("base_radio").get_text())
+    base = float(constructorInterfaz.get_object("base").get_text())
     altura = float(constructorInterfaz.get_object("altura").get_text())
     area = round((base * altura), 4)
     etiqueta = constructorInterfaz.get_object("resultado")
     etiqueta.set_text(str(area))
 
 def areaTriangulo(boton):
-    base = float(constructorInterfaz.get_object("base_radio").get_text())
+    base = float(constructorInterfaz.get_object("base").get_text())
     altura = float(constructorInterfaz.get_object("altura").get_text())
     area = round(((base * altura) / 2), 4)
     etiqueta = constructorInterfaz.get_object("resultado")

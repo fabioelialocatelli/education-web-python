@@ -1,4 +1,4 @@
-liga = {"FC Barcelona": 0, "Getafe": 0, "Granada CF": 0, "Malaga": 0, "Sevilla": 0, "Valencia": 0}
+ligaFutbol = {"FC Barcelona": 0, "Getafe": 0, "Granada CF": 0, "Malaga": 0, "Sevilla": 0, "Valencia": 0}
 
 numeroEquipos = 0
 numeroGoles = 0
@@ -10,27 +10,28 @@ menosGoles = 300
 equipoMenosGoles = ""
 
 print("LIGA DE FUTBOL\n")
-for clave in liga.items():
-    goles = eval(input("Goles del " + clave[0] + ": "))
-    liga[clave[0]] = goles
-    # numeroEquipos y numeroGoles son para calcular el promedio de goles
+
+for equipo in ligaFutbol.items():
+    golesEquipo = eval(input("Goles del " + equipo[0] + ": "))
+
+    ligaFutbol[equipo[0]] = golesEquipo    
     numeroEquipos += 1
-    numeroGoles += goles
-    # masGoles siempre tendrá el valor máximo introducido
-    if goles > masGoles:
-        masGoles = goles
-        equipoMasGoles = clave[0]
-    # menosGoles siempre tendrá el valor mínimo introducido
-    if goles < menosGoles:
-        menosGoles = goles
-        equipoMenosGoles = clave[0]
+    numeroGoles += golesEquipo
+    
+    if golesEquipo > masGoles:
+        masGoles = golesEquipo
+        equipoMasGoles = equipo[0]
+    
+    if golesEquipo < menosGoles:
+        menosGoles = golesEquipo
+        equipoMenosGoles = equipo[0]
 
 print("\nPromedio de goles: " + str(numeroGoles / numeroEquipos))
-print("Equipo con máximo de goles (" + str(masGoles) + "): " + equipoMasGoles)
-print("Equipo con mínimo de goles (" + str(menosGoles) + "): " + equipoMenosGoles)
+print("Equipo con maximo de goles (" + str(masGoles) + "): " + equipoMasGoles)
+print("Equipo con minimo de goles (" + str(menosGoles) + "): " + equipoMenosGoles)
 
-liga.pop(equipoMasGoles)
-liga.pop(equipoMenosGoles)
+ligaFutbol.pop(equipoMasGoles)
+ligaFutbol.pop(equipoMenosGoles)
 
-print("\nLa liga discriminando al máximo y al mínimo queda:")
-print(liga)
+print("\nLa liga discriminando al maximo y al minimo queda:")
+print(ligaFutbol)

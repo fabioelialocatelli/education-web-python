@@ -4,7 +4,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 global fichero
-fichero = open("becas.txt", "a+")
+fichero = open("becas.txt", "a+") #esto se parece muchisimo al Perl
 
 def mostrarAsignadas(boton):
     mostrarEstado("S")
@@ -13,9 +13,9 @@ def mostrarDenegadas(boton):
     mostrarEstado("N")
 
 def mostrarEstado(estado):
-    final = fichero.tell() - 61
+    final = fichero.tell() - 61 #posicion del cursor menos el numero de bytes
     actual = 0
-    fichero.seek(actual)
+    fichero.seek(actual) #posicion actual del cursor
     if(estado == "S"):
         print("ALUMNOS CON BECAS ASIGNADAS:")
     else:
@@ -24,10 +24,10 @@ def mostrarEstado(estado):
         campoNombre = fichero.read(20)
         campoApellido = fichero.read(30)
         campoExpediente = fichero.read(10)
-        campoAsignacion = fichero.read(1)
+        campoAsignacion = fichero.read(1) #el numero de bytes determina la posicion donde cada atributo esta en el registro
         if(campoAsignacion.upper() == estado):
             print(campoExpediente + " " + campoApellido.strip() + ", " + campoNombre.strip())
-        actual += 61
+        actual += 61 # adelantamos de un registro
 
 def agregamosBeca(boton):
     campoNombre = constructorInterfaz.get_object("campoNombre")
@@ -35,7 +35,7 @@ def agregamosBeca(boton):
     campoExpediente = constructorInterfaz.get_object("campoExpediente")
     campoAsignacion = constructorInterfaz.get_object("campoAsignacion")
 
-    # Cada registro ocupa 61 bytes (20 + 30 + 10 + 1)
+    #aqui se ve que cada registro ocupa 61 bytes. personalmente esto la haria con una base de datos, mucho mas sencillo
     registro = campoNombre.get_text().ljust(20) + campoApellido.get_text().ljust(30) + campoExpediente.get_text().ljust(10) + campoAsignacion.get_text().ljust(1).upper()
     fichero.write(registro)
 
@@ -46,10 +46,10 @@ def agregamosBeca(boton):
     campoAsignacion.set_text("")
 
 constructorInterfaz = Gtk.Builder()
-constructorInterfaz.add_from_file("becas.glade")
+constructorInterfaz.add_from_file("becas.glade") #cargando el archivo XML construido en Glade
 
-botonDenegadas = constructorInterfaz.get_object("botonDenegadas")
-botonDenegadas.connect("clicked", mostrarDenegadas)
+botonDenegadas = constructorInterfaz.get_object("botonDenegadas") #extraccion de objeto
+botonDenegadas.connect("clicked", mostrarDenegadas) #asignacion de metodo
 
 botonAsignadas = constructorInterfaz.get_object("botonAsignadas")
 botonAsignadas.connect("clicked", mostrarAsignadas)
@@ -59,5 +59,5 @@ botonAgregacion.connect("clicked", agregamosBeca)
 
 ventana = constructorInterfaz.get_object("ventana")
 ventana.connect("delete-event", Gtk.main_quit)
-ventana.show_all()
-Gtk.main()
+ventana.show_all() #mostramos todos los componentes
+Gtk.main() #esto seria el equivalente del mainloop() de TKinter

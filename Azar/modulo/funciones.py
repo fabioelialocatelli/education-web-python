@@ -1,18 +1,13 @@
-# -*- coding: utf-8 -*-
 import random
 
-
-def azar(maximo):
+def devuelveAzar(maximo):
     return random.randint(1, maximo)
 
-
-def mensajeAcierto():
+def mensajeAcertado():
     print("Acertaste!")
 
-
-def mensajeFallo():
+def mensajeFallado():
     print("Lo sentimos, fallaste!")
 
-
-def mensajeFin(numero):
-    print("No hay oportunidades, no acertaste! el número era el " + str(numero))
+def mensajeFinalizado(numero):
+    print("Lo sentimos, no hay mas oportunidades. El numero era el " + str(numero))
