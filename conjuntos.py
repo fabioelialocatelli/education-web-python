@@ -50,7 +50,7 @@ while(contador < len(regiones)):
         nombreRegion = regiones[contador + 1]
     contador = contador + 2
                 
-if(region == ""):
+if(region not in regiones):
     print("\nLa region de " + provinciaIndicada + " no se ha encontrado.")
 else:
     print("\nLa region de " + provinciaIndicada + " es " + nombreRegion)

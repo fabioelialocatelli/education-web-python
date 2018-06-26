@@ -3,7 +3,6 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
-
 def mostrarAsignadas(boton):
     mostrarEstado("ASIGNADA")
 
@@ -18,13 +17,13 @@ def mostrarEstado(estado):
         print("ALUMNOS CON BECAS ASIGNADAS:")
         contenido = fichero.readlines()
         for linea in contenido:
-            if("S" in linea):
+            if("ASIGNADA" in linea or "ASIGNADO" in linea):
                 print(linea)
     else:
         print("ALUMNOS CON BECAS DENEGADAS:")
         contenido = fichero.readlines()
         for linea in contenido:
-            if("DENEGADA" in linea):
+            if("DENEGADA" in linea or "DENEGADO" in linea):
                 print(linea)
 
     fichero.close()

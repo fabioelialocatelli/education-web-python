@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkWindow" id="ventana">
     <property name="can_focus">False</property>
     <child>
@@ -20,7 +21,7 @@
           </object>
           <packing>
             <property name="x">8</property>
-            <property name="y">14</property>
+            <property name="y">19</property>
           </packing>
         </child>
         <child>
@@ -34,7 +35,7 @@
           </object>
           <packing>
             <property name="x">8</property>
-            <property name="y">40</property>
+            <property name="y">60</property>
           </packing>
         </child>
         <child>
@@ -44,10 +45,14 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="x">124</property>
-            <property name="y">15</property>
+            <property name="x">130</property>
+            <property name="y">19</property>
           </packing>
         </child>
         <child>
@@ -57,15 +62,19 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="x">124</property>
-            <property name="y">40</property>
+            <property name="x">130</property>
+            <property name="y">62</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="crear">
-            <property name="label" translatable="yes">crear/abrir</property>
+            <property name="label" translatable="yes">Abrir</property>
             <property name="width_request">100</property>
             <property name="height_request">30</property>
             <property name="visible">True</property>
@@ -73,13 +82,13 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">12</property>
-            <property name="y">92</property>
+            <property name="x">26</property>
+            <property name="y">118</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="anadir">
-            <property name="label" translatable="yes">añadir</property>
+            <property name="label" translatable="yes">Anadir</property>
             <property name="width_request">100</property>
             <property name="height_request">30</property>
             <property name="visible">True</property>
@@ -87,13 +96,13 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">121</property>
-            <property name="y">110</property>
+            <property name="x">337</property>
+            <property name="y">121</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="borrar">
-            <property name="label" translatable="yes">borrar</property>
+            <property name="label" translatable="yes">Borrar</property>
             <property name="width_request">100</property>
             <property name="height_request">30</property>
             <property name="visible">True</property>
@@ -101,13 +110,13 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">225</property>
-            <property name="y">110</property>
+            <property name="x">336</property>
+            <property name="y">181</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="eliminar">
-            <property name="label" translatable="yes">eliminar</property>
+            <property name="label" translatable="yes">Eliminar</property>
             <property name="width_request">100</property>
             <property name="height_request">30</property>
             <property name="visible">True</property>
@@ -115,13 +124,13 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">12</property>
-            <property name="y">127</property>
+            <property name="x">23</property>
+            <property name="y">244</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="listar">
-            <property name="label" translatable="yes">listar</property>
+            <property name="label" translatable="yes">Listar</property>
             <property name="width_request">100</property>
             <property name="height_request">30</property>
             <property name="visible">True</property>
@@ -129,8 +138,8 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">330</property>
-            <property name="y">110</property>
+            <property name="x">335</property>
+            <property name="y">243</property>
           </packing>
         </child>
       </object>

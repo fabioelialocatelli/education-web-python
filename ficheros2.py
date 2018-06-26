@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import gi
 import os
 
@@ -94,11 +92,11 @@ botonEliminado.connect("clicked", eliminamosArchivo)
 botonAnadido = constructorInterfaz.get_object("anadir")
 botonAnadido.connect("clicked", anadeRegistro)
 
-botonlistado = constructorInterfaz.get_object("listar")
-botonlistado.connect("clicked", listaRegistro)
-
 botonBorrado = constructorInterfaz.get_object("borrar")
 botonBorrado.connect("clicked", borraRegistro)
+
+botonListado = constructorInterfaz.get_object("listar")
+botonListado.connect("clicked", listaRegistro)
 
 interfazUsuario = constructorInterfaz.get_object("ventana")
 interfazUsuario.connect("delete-event", Gtk.main_quit)

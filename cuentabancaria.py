@@ -31,22 +31,22 @@ class Cuenta(Convertidor):
         else:
             raise TypeError("Falta indicar la moneda!")
 
-print("Establecemos una cuenta bancaria con cambio a 1.38 y en euros")
-objetoCuenta = Cuenta("125000456", "e", 1.38, 0)
+print("Establecemos una cuenta bancaria con cambio a 1.17 y en euros")
+objetoCuenta = Cuenta("125000456", "e", 1.17, 0)
 print("Ingresamos 250.5 euros y mostramos el saldo en ambas monedas")
 objetoCuenta.ingresarDinero(250.5)
-print((" - Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
-print((" - Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
+print(("• Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
+print(("• Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
 
 print("Ingresamos 125.75 euros y mostramos el saldo en ambas monedas")
 objetoCuenta.ingresarDinero(125.75)
-print((" - Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
-print((" - Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
+print(("• Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
+print(("• Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
 
 print("Cambiamos la moneda actual a dolares")
 objetoCuenta.monedaActual("d")
 
 print("Retiramos 20 dolares y mostramos el saldo en ambas monedas")
 objetoCuenta.retirarDinero(20)
-print((" - Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
-print((" - Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
+print(("• Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
+print(("• Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))

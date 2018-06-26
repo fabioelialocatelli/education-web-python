@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.10 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkWindow" id="ventana">
     <property name="can_focus">False</property>
     <child>
@@ -17,7 +18,7 @@
             <property name="justify">right</property>
           </object>
           <packing>
-            <property name="x">50</property>
+            <property name="x">61</property>
             <property name="y">13</property>
           </packing>
         </child>
@@ -31,8 +32,8 @@
             <property name="justify">right</property>
           </object>
           <packing>
-            <property name="x">22</property>
-            <property name="y">83</property>
+            <property name="x">28</property>
+            <property name="y">122</property>
           </packing>
         </child>
         <child>
@@ -45,8 +46,8 @@
             <property name="justify">right</property>
           </object>
           <packing>
-            <property name="x">4</property>
-            <property name="y">113</property>
+            <property name="x">11</property>
+            <property name="y">176</property>
           </packing>
         </child>
         <child>
@@ -58,8 +59,8 @@
             <property name="label" translatable="yes">Apellidos:</property>
           </object>
           <packing>
-            <property name="x">47</property>
-            <property name="y">46</property>
+            <property name="x">56</property>
+            <property name="y">67</property>
           </packing>
         </child>
         <child>
@@ -68,10 +69,14 @@
             <property name="height_request">21</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="x">122</property>
-            <property name="y">18</property>
+            <property name="x">161</property>
+            <property name="y">19</property>
           </packing>
         </child>
         <child>
@@ -80,10 +85,14 @@
             <property name="height_request">22</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="x">122</property>
-            <property name="y">52</property>
+            <property name="x">159</property>
+            <property name="y">73</property>
           </packing>
         </child>
         <child>
@@ -92,10 +101,14 @@
             <property name="height_request">20</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="x">123</property>
-            <property name="y">121</property>
+            <property name="x">157</property>
+            <property name="y">184</property>
           </packing>
         </child>
         <child>
@@ -104,15 +117,19 @@
             <property name="height_request">20</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="x">122</property>
-            <property name="y">87</property>
+            <property name="x">157</property>
+            <property name="y">128</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="botonAgregacion">
-            <property name="label" translatable="yes">Añadir</property>
+            <property name="label" translatable="yes">Anadir</property>
             <property name="width_request">100</property>
             <property name="height_request">50</property>
             <property name="visible">True</property>
@@ -120,8 +137,8 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">371</property>
-            <property name="y">24</property>
+            <property name="x">461</property>
+            <property name="y">56</property>
           </packing>
         </child>
         <child>
@@ -134,8 +151,8 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">307</property>
-            <property name="y">89</property>
+            <property name="x">354</property>
+            <property name="y">155</property>
           </packing>
         </child>
         <child>
@@ -148,8 +165,8 @@
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="x">430</property>
-            <property name="y">89</property>
+            <property name="x">553</property>
+            <property name="y">156</property>
           </packing>
         </child>
       </object>
