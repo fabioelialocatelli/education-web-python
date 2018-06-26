@@ -24,11 +24,13 @@ class Convertidor(object):
             print("Conversion invalida")
 
 
-print("Establecemos el cambio euro-dolar en 1.37")
-objetoConvertidor = Convertidor(1.37)
+print("Establecemos el cambio euro-dolar en 1.17")
+objetoConvertidor = Convertidor(1.17)
+
 print("Indicamos una cantidad impuesta de 220 euros")
 objetoConvertidor.convertirEuros(220)
 objetoConvertidor.devolverConversion()
+
 print("Indicamos una cantidad impuesta de 350 dolares")
 objetoConvertidor.convertirDolares(350)
 objetoConvertidor.devolverConversion()

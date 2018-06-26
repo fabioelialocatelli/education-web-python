@@ -1,117 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkWindow" id="ventana">
     <property name="can_focus">False</property>
     <child>
-      <object class="GtkGrid" id="grid1">
+      <object class="GtkFixed" id="fixed1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="margin_bottom">65</property>
-        <child>
-          <object class="GtkLabel" id="label1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Base / Radio:</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">0</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="label2">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Altura:</property>
-          </object>
-          <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">1</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
-          </packing>
-        </child>
         <child>
           <object class="GtkEntry" id="base">
+            <property name="width_request">158</property>
+            <property name="height_request">23</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">0</property>
-            <property name="width">2</property>
-            <property name="height">1</property>
+            <property name="x">363</property>
+            <property name="y">29</property>
           </packing>
         </child>
         <child>
           <object class="GtkEntry" id="altura">
+            <property name="width_request">158</property>
+            <property name="height_request">23</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="invisible_char">●</property>
+            <property name="primary_icon_activatable">False</property>
+            <property name="secondary_icon_activatable">False</property>
+            <property name="primary_icon_sensitive">True</property>
+            <property name="secondary_icon_sensitive">True</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">1</property>
-            <property name="width">2</property>
-            <property name="height">1</property>
+            <property name="x">365</property>
+            <property name="y">91</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="triangulo">
             <property name="label" translatable="yes">Triángulo</property>
+            <property name="width_request">61</property>
+            <property name="height_request">25</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">2</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
+            <property name="x">69</property>
+            <property name="y">73</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="rectangulo">
             <property name="label" translatable="yes">Rectangulo</property>
+            <property name="width_request">70</property>
+            <property name="height_request">25</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">2</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
+            <property name="x">70</property>
+            <property name="y">125</property>
           </packing>
         </child>
         <child>
           <object class="GtkLabel" id="resultado">
+            <property name="width_request">78</property>
+            <property name="height_request">29</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="width_chars">10</property>
           </object>
           <packing>
-            <property name="left_attach">0</property>
-            <property name="top_attach">3</property>
-            <property name="width">3</property>
-            <property name="height">1</property>
+            <property name="x">407</property>
+            <property name="y">148</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="cilindro">
             <property name="label" translatable="yes">Cilindro</property>
+            <property name="width_request">52</property>
+            <property name="height_request">25</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
           </object>
           <packing>
-            <property name="left_attach">2</property>
-            <property name="top_attach">2</property>
-            <property name="width">1</property>
-            <property name="height">1</property>
+            <property name="x">70</property>
+            <property name="y">23</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="width_request">80</property>
+            <property name="height_request">33</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">base / radio:</property>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">23</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="width_request">76</property>
+            <property name="height_request">36</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">altura:</property>
+          </object>
+          <packing>
+            <property name="x">213</property>
+            <property name="y">82</property>
           </packing>
         </child>
       </object>

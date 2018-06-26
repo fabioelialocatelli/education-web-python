@@ -15,7 +15,7 @@ class Cuenta(Convertidor):
         else:
             raise TypeError("Moneda Desconocida")
 
-    def Ingresar(self, cantidadIndicada):
+    def ingresarDinero(self, cantidadIndicada):
         if(self.moneda == "e"):
             self.cantidadEuros = self.devolverCantidad("e") + cantidadIndicada
         elif(self.moneda == "d"):
@@ -23,7 +23,7 @@ class Cuenta(Convertidor):
         else:
             raise TypeError("Falta indicar la moneda!")
 
-    def Retirar(self, cantidadIndicada):
+    def retirarDinero(self, cantidadIndicada):
         if(self.moneda == "e"):
             self.cantidadEuros = self.devolverCantidad("e") - cantidadIndicada
         elif(self.moneda == "d"):
@@ -34,16 +34,19 @@ class Cuenta(Convertidor):
 print("Establecemos una cuenta bancaria con cambio a 1.38 y en euros")
 objetoCuenta = Cuenta("125000456", "e", 1.38, 0)
 print("Ingresamos 250.5 euros y mostramos el saldo en ambas monedas")
-objetoCuenta.Ingresar(250.5)
+objetoCuenta.ingresarDinero(250.5)
 print((" - Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
 print((" - Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
+
 print("Ingresamos 125.75 euros y mostramos el saldo en ambas monedas")
-objetoCuenta.Ingresar(125.75)
+objetoCuenta.ingresarDinero(125.75)
 print((" - Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
 print((" - Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))
-print("Cambiamos la moneda actual a dólares")
+
+print("Cambiamos la moneda actual a dolares")
 objetoCuenta.monedaActual("d")
-print("Retiramos 20 dólares y mostramos el saldo en ambas monedas")
-objetoCuenta.Retirar(20)
+
+print("Retiramos 20 dolares y mostramos el saldo en ambas monedas")
+objetoCuenta.retirarDinero(20)
 print((" - Cantidad en euros: " + str(objetoCuenta.devolverCantidad("e"))))
 print((" - Cantidad en dolares: " + str(objetoCuenta.devolverCantidad("d"))))

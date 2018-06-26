@@ -1,7 +1,9 @@
 articulo1 = input("Primer artículo: ")
 precioArticulo1 = eval(input("Precio: "))
+
 articulo2 = input("Segundo artículo: ")
 precioArticulo2 = eval(input("Precio: "))
+
 articulo3 = input("Tercer artículo: ")
 precioArticulo3 = eval(input("Precio: "))
 
